@@ -1,0 +1,35 @@
+#publish-button {
+    background-color: rgb(41, 158, 41);
+    color: white;
+}
+
+#cancel-button {
+    background-color: lightgray;
+    color: darkslategray;
+    border-color: darkslategray;
+}
+
+#instagram {
+    font-family: 'Lobster', cursive;
+}
+
+.nav-link.active {
+    background-color: darkslategray;
+
+}
+
+.nav-pills .nav-item .active {
+    background-color: darkslategray;
+    color: white;
+}
+
+.nav-pills .nav-item button{
+    color: darkslategray;
+    background-color: white;
+
+}
+
+.nav-pills .nav-item button:hover {
+    background-color: lightgray;
+    color: darkslategray;
+}

@@ -5,39 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8dec688bfa.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 <div class="container-fluid">
-   <span class="navbar-text">
+   <span class="navbar-text fs-4" id="instagram">
+       <i class="fab fa-instagram"></i>
       Instagram
     </span>
 
     <div class="d-flex flex-row">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+    <button type="button" id="publish-button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Create a new post</button>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+               
             <div class="modal-body">
                 <form>
                 <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Recipient:</label>
-                    <input type="text" class="form-control" id="recipient-name">
-                </div>
-                <div class="mb-3">
-                    <label for="message-text" class="col-form-label">Message:</label>
                     <textarea class="form-control" id="message-text"></textarea>
+                </div>
+                <div class="d-flex flex-row">
+                    <button type="button" class="btn btn-outline-secondary"><i class="fas fa-camera"></i></button>
+                    <button type="button" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt"></i></button>
                 </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
+                <button type="button" id="cancel-button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" id="publish-button" class="btn btn-primary">Publish</button>
             </div>
             </div>
         </div>
@@ -46,8 +47,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Settings
+                <a class="nav-link dropdown-toggle me-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-cog"></i>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#">Action</a></li>
@@ -64,25 +65,33 @@
 </nav>
 
     <div class="container">
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fas fa-th"></i></button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fas fa-stop"></i></button>
             </li>
         </ul>
     </div>    
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4">.</div>
-                    <div class="col-4">..</div>
-                    <div class="col-4">...</div>
+            <div class="container d-inline-block">
+                <div class="row flex-nowrap justify-content-center">
+                    <div class="col-4 w-25 p-2">
+                        <img src="https://media.istockphoto.com/photos/groups-of-dogs-labrador-puppies-puppy-chocolate-labrador-retriever-in-picture-id1069531070?k=6&m=1069531070&s=612x612&w=0&h=ZIQVwmSlyyROu1M5ei_N31SHKjvfGLfORsU1B6pu_ko=" class="d-block mx-auto" alt="three labrador puppies sitting and looking adorable/">
+                    </div>
+                    <div class="col-4 w-25 p-2">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="A corgie dog and a yorkie dog running down a path together with the sun shinng behind them">
+                    </div>
+                    <div class="col-4 w-25 p-2">
+                        <img src="https://media.istockphoto.com/photos/bowl-dish-with-brown-rice-cucumber-tomato-green-peas-red-cabbage-picture-id1047798504?k=6&m=1047798504&s=612x612&w=0&h=SqHh8UZas82kGOifausDLjh5WcJRT4T4pFtBNB-BVg4=" alt="A very colorful bowl of vegan food: peas, chickpeas, carrots, lettuce, rice">
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-4">.</div>
+                    <div class="col-4 w-25 p-2 justify-content-center">
+                        <img src="https://3gz8cg829c.execute-api.us-west-2.amazonaws.com/prod/image-renderer/original/full/1600/center/80/51f02eb3-ec38-4ea3-9dcd-49ef04c16f89-epic_sunset_jan30_2019_71.jpg" alt="vibrant sunset over the Pugent Sound with the Space Needle up front. Photo by Meg McDonald">
+                    </div>
                     <div class="col-4">..</div>
                     <div class="col-4">...</div>
                 </div>
