@@ -18,7 +18,7 @@
        <i class="fab fa-instagram"></i>
       Instagram
     </span>
-
+    <!--Create a new post modal-->
     <div class="d-flex flex-row">
     <button type="button" id="publish-button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Create a new post</button>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-
+        <!--Settings and logout-->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
@@ -63,7 +63,7 @@
         </div>
   </div>
 </nav>
-
+    <!--Pills tabs-->   
     <div class="container">
         <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -73,36 +73,41 @@
                 <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fas fa-stop"></i></button>
             </li>
         </ul>
-    </div>    
+    </div> 
+    
+    <!--1st tab-->
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            <div class="container d-inline-block">
-                <div class="row flex-nowrap justify-content-center">
-                    <div class="col-4 w-25 p-2">
+            <div class="container-fluid">
+                <div class="row d-flex flex-row justify-content-center m-auto">
+                    <div class="col p-2">
                         <img src="https://media.istockphoto.com/photos/groups-of-dogs-labrador-puppies-puppy-chocolate-labrador-retriever-in-picture-id1069531070?k=6&m=1069531070&s=612x612&w=0&h=ZIQVwmSlyyROu1M5ei_N31SHKjvfGLfORsU1B6pu_ko=" class="d-block mx-auto" alt="three labrador puppies sitting and looking adorable/">
                     </div>
-                    <div class="col-4 w-25 p-2">
+                    <div class="col p-2">
                         <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="A corgie dog and a yorkie dog running down a path together with the sun shinng behind them">
                     </div>
-                    <div class="col-4 w-25 p-2">
+                    <div class="col p-2">
                         <img src="https://media.istockphoto.com/photos/bowl-dish-with-brown-rice-cucumber-tomato-green-peas-red-cabbage-picture-id1047798504?k=6&m=1047798504&s=612x612&w=0&h=SqHh8UZas82kGOifausDLjh5WcJRT4T4pFtBNB-BVg4=" alt="A very colorful bowl of vegan food: peas, chickpeas, carrots, lettuce, rice">
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-4 w-25 p-2 justify-content-center">
+                <div class="d-flex flex-row">
+                    <div class="col p-2">
                         <img src="https://3gz8cg829c.execute-api.us-west-2.amazonaws.com/prod/image-renderer/original/full/1600/center/80/51f02eb3-ec38-4ea3-9dcd-49ef04c16f89-epic_sunset_jan30_2019_71.jpg" alt="vibrant sunset over the Pugent Sound with the Space Needle up front. Photo by Meg McDonald">
                     </div>
-                    <div class="col-4">..</div>
-                    <div class="col-4">...</div>
+                    <div class="col">..</div>
+                    <div class="col">...</div>
                 </div>
-                <div class="row">
-                    <div class="col-4">.</div>
-                    <div class="col-4">..</div>
-                    <div class="col-4">...</div>
+                <div class="d-flex flex-row">
+                    <div class="col">.</div>
+                    <div class="col">..</div>
+                    <div class="col">...</div>
                 </div>
             </div>    
         </div>
+
+        <!-- 2nd Tab -->
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="container">
             <div class="post">
                 <div class="box-header">
                     <h3>My first photo</h3>
@@ -115,7 +120,27 @@
                     <p>This is my first photo of the feed. This is a multi line comment for testing purposes.  I am learning to code with <strong>#BreatheCode</strong>
                     </p>   
                 </div>
+        
             </div>
+            
+
+            <!--First card/post-->
+            <div class="card m-auto" style="width: 60rem;">
+                <div class="card-title d-flex flex-row justify-content-between">
+                    <h3 class="card-title ">My first post</h3>
+                    <p id="date" class="card-text">12/14</p>
+                </div>
+                <img src="https://media.istockphoto.com/photos/groups-of-dogs-labrador-puppies-puppy-chocolate-labrador-retriever-in-picture-id1069531070?k=6&m=1069531070&s=612x612&w=0&h=ZIQVwmSlyyROu1M5ei_N31SHKjvfGLfORsU1B6pu_ko=" class="card-img-top" alt="three labrador puppies sitting and looking adorable">
+                <div class="card-body">
+                    <p class="card-text"><strong>23 Likes</strong></p>
+                    <p class="card-text">This is my first photo of the feed. This is a multi line comment for testing purposes.  I am learning to code with #BreatheCode</p>
+                    <div class="card-body d-flex flex row">
+                        <p id="comment" class="card-text d-inline-flex justify-content-start"><i class="far fa-heart"></i>Comment...</p>
+                        <p id="more" class="card-text d-inline-flex justify-content-end"><i class="fas fa-ellipsis-v"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         
     </div>

@@ -33,3 +33,11 @@
     background-color: lightgray;
     color: darkslategray;
 }
+
+#date {
+    color: gray
+}
+
+.card-body #comment {
+    color: gray;
+}
