@@ -1,153 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8dec688bfa.js" crossorigin="anonymous"></script>
-    
+
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-<div class="container-fluid">
-   <span class="navbar-text fs-4" id="instagram">
-       <i class="fab fa-instagram"></i>
-      Instagram
-    </span>
-    <!--Create a new post modal-->
-    <div class="d-flex flex-row">
-    <button type="button" id="publish-button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Create a new post</button>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-               
-            <div class="modal-body">
-                <form>
-                <div class="mb-3">
-                    <textarea class="form-control" id="message-text"></textarea>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-text fs-4" id="instagram">
+                <i class="fab fa-instagram"></i>
+                Instagram
+            </span>
+            <!--Create a new post modal-->
+            <div class="d-flex flex-row">
+                <button type="button" id="publish-button" class="btn btn-success" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" data-bs-whatever="@mdo">Create a new post</button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <textarea class="form-control" id="message-text"></textarea>
+                                    </div>
+                                    <div class="d-flex flex-row">
+                                        <button type="button" class="btn btn-outline-secondary"><i
+                                                class="fas fa-camera"></i></button>
+                                        <button type="button" class="btn btn-outline-secondary"><i
+                                                class="fas fa-map-marker-alt"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="cancel-button" class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" id="publish-button" class="btn btn-primary">Publish</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="d-flex flex-row">
-                    <button type="button" class="btn btn-outline-secondary"><i class="fas fa-camera"></i></button>
-                    <button type="button" class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt"></i></button>
+                <!--Settings and logout-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle me-5" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-cog"></i>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" id="cancel-button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" id="publish-button" class="btn btn-primary">Publish</button>
-            </div>
             </div>
         </div>
-    </div>
-        <!--Settings and logout-->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle me-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fas fa-cog"></i>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Logout</a></li>
-                </ul>
-                </li>
-            </ul>
-        </div>
-        </div>
-  </div>
-</nav>
-    <!--Pills tabs-->   
+    </nav>
+    <!--Pills tabs-->
     <div class="container">
         <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fas fa-th"></i></button>
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                    type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i
+                        class="fas fa-th"></i></button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fas fa-stop"></i></button>
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                    type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i
+                        class="fas fa-stop"></i></button>
             </li>
         </ul>
-    </div> 
-    
+    </div>
+
     <!--1st tab-->
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
             <div class="container-fluid">
-                <div class="row d-flex flex-row justify-content-center m-auto">
-                    <div class="col p-2">
-                        <img src="https://media.istockphoto.com/photos/groups-of-dogs-labrador-puppies-puppy-chocolate-labrador-retriever-in-picture-id1069531070?k=6&m=1069531070&s=612x612&w=0&h=ZIQVwmSlyyROu1M5ei_N31SHKjvfGLfORsU1B6pu_ko=" class="d-block mx-auto" alt="three labrador puppies sitting and looking adorable/">
+                <div class="row d-flex flex-row m-auto px-2">
+                    <div class="col-4">
+                        <img src="https://media.istockphoto.com/photos/groups-of-dogs-labrador-puppies-puppy-chocolate-labrador-retriever-in-picture-id1069531070?k=6&m=1069531070&s=612x612&w=0&h=ZIQVwmSlyyROu1M5ei_N31SHKjvfGLfORsU1B6pu_ko="
+                            class="w-100" alt="three labrador puppies sitting and looking adorable/">
                     </div>
-                    <div class="col p-2">
-                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="A corgie dog and a yorkie dog running down a path together with the sun shinng behind them">
+                    <div class="col-4">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+                            class="w-100"
+                            alt="A corgie dog and a yorkie dog running down a path together with the sun shining behind them">
                     </div>
-                    <div class="col p-2">
-                        <img src="https://media.istockphoto.com/photos/bowl-dish-with-brown-rice-cucumber-tomato-green-peas-red-cabbage-picture-id1047798504?k=6&m=1047798504&s=612x612&w=0&h=SqHh8UZas82kGOifausDLjh5WcJRT4T4pFtBNB-BVg4=" alt="A very colorful bowl of vegan food: peas, chickpeas, carrots, lettuce, rice">
+                    <div class="col-4">
+                        <img src="https://media.istockphoto.com/photos/bowl-dish-with-brown-rice-cucumber-tomato-green-peas-red-cabbage-picture-id1047798504?k=6&m=1047798504&s=612x612&w=0&h=SqHh8UZas82kGOifausDLjh5WcJRT4T4pFtBNB-BVg4="
+                            class="w-100"
+                            alt="A very colorful bowl of vegan food: peas, chickpeas, carrots, lettuce, rice">
                     </div>
                 </div>
-                <div class="d-flex flex-row">
-                    <div class="col p-2">
-                        <img src="https://3gz8cg829c.execute-api.us-west-2.amazonaws.com/prod/image-renderer/original/full/1600/center/80/51f02eb3-ec38-4ea3-9dcd-49ef04c16f89-epic_sunset_jan30_2019_71.jpg" alt="vibrant sunset over the Pugent Sound with the Space Needle up front. Photo by Meg McDonald">
+                <div class="d-flex flex-row m-auto p-2">
+                    <div class="col">
+                        <img src="https://3gz8cg829c.execute-api.us-west-2.amazonaws.com/prod/image-renderer/original/full/1600/center/80/51f02eb3-ec38-4ea3-9dcd-49ef04c16f89-epic_sunset_jan30_2019_71.jpg"
+                            class="w-100"
+                            alt="vibrant sunset over the Pugent Sound with the Space Needle up front. Photo by Meg McDonald">
                     </div>
-                    <div class="col">..</div>
-                    <div class="col">...</div>
+                    <div class="col px-2">
+                        <img src="https://nas-national-prod.s3.amazonaws.com/styles/article_hero_inline/s3/web_apa-2017_bushtit_a1_4207_4_kk_devin-grady.jpg?itok=AUZaMsbx" class="w-100" alt="bushtit bird photo by devin grady"/>
+                    </div>
+                     <div class="col">
+                        <img src="https://las.illinois.edu/sites/default/files/inline-images/Cicada20_story2.png" class="w-100" alt="a newly molted cicada on a tree next to its exuvia"/>
+                    </div>
                 </div>
-                <div class="d-flex flex-row">
-                    <div class="col">.</div>
-                    <div class="col">..</div>
-                    <div class="col">...</div>
+                <div class="d-flex flex-row m-auto p-2 h-100px">
+                    <div class="col">
+                        <img src="https://www.tehaleh.com/media/8070156/mt-rainier-paradise-1.png" class="w-100" alt="mt. rainier in the background of a lush meadow with flowers. Photo from tehaleh.com"/>
+                    </div>
+                    <div class="col px-2">
+                        <img src="https://www.roadtripusa.com/wp-content/uploads/2018/09/Washington_CapeFlattery_HarryHu123rf.jpg" class="w-100" alt="the cape flattery coast photo by Harry Hu"/>
+                    </div>
+                    <div class="col">
+                        <img src="http://www.southsoundtalk.com/wp-content/uploads/2017/04/158e2dde6875da-Bridges-Narrows.jpg" class="w-100" alt="tacoma narrows bridge photo by chelsea clark"/>
+                    </div>
+                   
                 </div>
-            </div>    
+            </div>
         </div>
 
         <!-- 2nd Tab -->
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-        <div class="container">
-            <div class="post">
-                <div class="box-header">
-                    <h3>My first photo</h3>
-                    <p>12/14</p>
-                </div>
-                <div class="photo">
-                    <img src="https://media.istockphoto.com/photos/groups-of-dogs-labrador-puppies-puppy-chocolate-labrador-retriever-in-picture-id1069531070?k=6&m=1069531070&s=612x612&w=0&h=ZIQVwmSlyyROu1M5ei_N31SHKjvfGLfORsU1B6pu_ko=" alt="three labrador puppies sitting and looking adorable" object-fit="cover"/>
-                </div>
-                <div class="description">
-                    <p>This is my first photo of the feed. This is a multi line comment for testing purposes.  I am learning to code with <strong>#BreatheCode</strong>
-                    </p>   
-                </div>
-        
-            </div>
-            
+            <div class="container">
 
-            <!--First card/post-->
-            <div class="card m-auto" style="width: 60rem;">
-                <div class="card-title d-flex flex-row justify-content-between">
-                    <h3 class="card-title ">My first post</h3>
-                    <p id="date" class="card-text">12/14</p>
-                </div>
-                <img src="https://media.istockphoto.com/photos/groups-of-dogs-labrador-puppies-puppy-chocolate-labrador-retriever-in-picture-id1069531070?k=6&m=1069531070&s=612x612&w=0&h=ZIQVwmSlyyROu1M5ei_N31SHKjvfGLfORsU1B6pu_ko=" class="card-img-top" alt="three labrador puppies sitting and looking adorable">
-                <div class="card-body">
-                    <p class="card-text"><strong>23 Likes</strong></p>
-                    <p class="card-text">This is my first photo of the feed. This is a multi line comment for testing purposes.  I am learning to code with #BreatheCode</p>
-                    <div class="card-body d-flex flex row">
-                        <p id="comment" class="card-text d-inline-flex justify-content-start"><i class="far fa-heart"></i>Comment...</p>
-                        <p id="more" class="card-text d-inline-flex justify-content-end"><i class="fas fa-ellipsis-v"></i></a>
+                <!--First card/post-->
+                <div class="card m-auto" style="width: 60rem;">
+                    <div class="card-title d-flex flex-row justify-content-between">
+                        <h3 class="card-title ">My first post</h3>
+                        <p id="date" class="card-text">12/14</p>
+                    </div>
+                    <img src="https://media.istockphoto.com/photos/groups-of-dogs-labrador-puppies-puppy-chocolate-labrador-retriever-in-picture-id1069531070?k=6&m=1069531070&s=612x612&w=0&h=ZIQVwmSlyyROu1M5ei_N31SHKjvfGLfORsU1B6pu_ko="
+                        class="card-img-top" alt="three labrador puppies sitting and looking adorable">
+                    <div class="card-body">
+                        <p class="card-text"><strong>23 Likes</strong></p>
+                        <p class="card-text">This is my first photo of the feed. This is a multi line comment for
+                            testing purposes. I am learning to code with #BreatheCode</p>
+                        <div class="card-body d-flex flex row">
+                            <p id="comment" class="card-text d-inline-flex justify-content-start"><i
+                                    class="far fa-heart"></i>Comment...</p>
+                            <p id="more" class="card-text d-inline-flex justify-content-end"><i
+                                    class="fas fa-ellipsis-v"></i></a>
+                        </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-8 border rounded p-2 mx-auto">
+                        <div class="row">
+                            <div class="col">
+                                <h2>My first post</h2>
+                            </div>
+                            <div class="col">
+                                <p class="text-secondary text-end">12/14</p>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <img src="https://media.istockphoto.com/photos/groups-of-dogs-labrador-puppies-puppy-chocolate-labrador-retriever-in-picture-id1069531070?k=6&m=1069531070&s=612x612&w=0&h=ZIQVwmSlyyROu1M5ei_N31SHKjvfGLfORsU1B6pu_ko=" class="w-100"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <strong>23 Likes</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p>This is my first photo of the feed. This is a multi line comment for
+                            testing purposes. I am learning to code with #BreatheCode</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1 pe-0">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="col-10 ps-0">
+                                <p>Comment...</p>
+                            </div>
+                            <div class="col-1">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                </div>
+
             </div>
         </div>
-        </div>
-        
-    </div>
+
     </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

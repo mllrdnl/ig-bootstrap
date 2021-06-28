@@ -5,8 +5,8 @@
 
 #cancel-button {
     background-color: lightgray;
-    color: darkslategray;
-    border-color: darkslategray;
+    color: darkgray;
+    border-color: darkgray;
 }
 
 #instagram {
@@ -14,12 +14,12 @@
 }
 
 .nav-link.active {
-    background-color: darkslategray;
+    background-color: darkgray;
 
 }
 
 .nav-pills .nav-item .active {
-    background-color: darkslategray;
+    background-color: darkgray;
     color: white;
 }
 
